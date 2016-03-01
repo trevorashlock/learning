@@ -1,0 +1,30 @@
+<html ng-app='learning'>
+<head> 
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" text="text/css" href="styles.css">
+</head>
+<body ng-controller="mainCtrl">
+	
+     <h1>{{message}}</h1>
+     <div>{{error}}</div>
+     {{username}}
+     <form name="searchUser">
+     	<input type="search" placeholder="Who you looking for?" ng-model="username">
+     	<input type="submit" value="search" ng-click="search(username)">
+     </form>
+
+    <div>
+    	<h2>{{user.name}}</h2>
+       <img ng-src="http://www.gravatar.com/avatar/{{user.gravatar_id}}" title="{{user.name}}">
+    </div>
+
+
+	
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.2/angular.min.js"></script>
+	<script src="app.js"></script>
+	<script src="mainCtrl.js"></script>
+</body>
+</html>
